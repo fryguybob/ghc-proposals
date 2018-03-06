@@ -53,9 +53,11 @@ As a special case, this proposal also provides for the declaration of
 constructors with *identity*. That is, constructors that are created
 by an explicitly effectful operation, and that can be compared using
 pointer-equality.  Currently only a few built-in types like ``IORef``
-have identity, so we can currently simulate identity using an
-``IORef`` proxy, but this proposal allows constructors with identity
-to be defined natively.
+have identity, so we can currently simulate identity using one of
+these existing built-in types as a proxy (for an example, see the
+`unique package
+<https://github.com/ekmett/unique/blob/master/src/Control/Concurrent/Unique.hs>`_). This
+proposal allows constructors with identity to be defined natively.
 
 Proposed Change
 ---------------
